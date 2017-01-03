@@ -1,0 +1,8 @@
+# ignore compiled python files
+*.pyc
+
+# ignore sqlite3 database
+db.sqlite3
+
+# Ignore Mac OS system file
+.DS_Store
