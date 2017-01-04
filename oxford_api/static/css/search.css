@@ -1,0 +1,11 @@
+.content-search {
+  height: 40em;
+}
+
+.lowercased {
+  text-transform: capitalize;
+}
+
+#search-button {
+  margin-top: 1rem;
+}

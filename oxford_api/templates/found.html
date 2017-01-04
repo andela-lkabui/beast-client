@@ -1,0 +1,44 @@
+{% extends "base/base.html" %}
+{% block title %}
+  Search Word Results
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div id="search-result" class="col s10 offset-s1 l8 offset-l2">
+      <div id="word-id">{{ word_id }}</div>
+      <div id="phonetic-spelling">/{{ phonetic }}/</div>
+      <br/>
+      <div id="lexical-cat">{{ lex_cat }}</div>
+      <br/>
+      <div class="col s11 offset-s1">
+
+        <div>{{ definition }}</div>
+
+        <div class="grey-text">e.g.</div>
+        <div class="col s11 offset-s1">
+          {% for example in examples %}
+            <div class="grey-text">
+              <div>"{{ example }}"</div>
+            </div>
+          {% empty %}
+            <div class=" grey-text">
+              <div>Nein Example</div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="grey-text">synonyms:</div>
+        <div class="col s11 offset-s1">
+          <div class="grey-text">{{ synonyms }}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s10 offset-s1 l8 offset-l2">
+      <a href="{% url 'search' %}" class="waves-effect waves-light btn right lowercased"><i class="material-icons right">home</i>Take me Home</a>
+    </div>
+  </div>
+{% endblock %}

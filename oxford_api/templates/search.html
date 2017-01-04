@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% block title %}
+  Search Word Definition
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="valign-wrapper col s12 content-search">
+      <div class="valign col s12">
+        <form action="{% url 'search' %}" class="col s12">
+
+          <div class="row">
+
+            <div class="input-field col s10 offset-s1 l7 offset-l1">
+              <input placeholder="Type word here." id="search" type="text" name="word_id">
+              <label for="search">Search Word</label>
+            </div>
+
+            <div class="col s10 offset-s1 l3 center">
+              <button id="search-button" class="btn waves-effect waves-light lowercased" type="submit">Search
+                <i class="material-icons right">search</i>
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

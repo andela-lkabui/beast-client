@@ -1,0 +1,17 @@
+#search-result {
+  border: #e0e0e0 solid;
+  border-width: 1px;
+  padding: 3em;
+}
+
+#word-id {
+  font-size: 25px;
+}
+
+#phonetic-spelling {
+  font-weight: bold;
+}
+
+#lexical-cat {
+  font-style: italic;
+}
