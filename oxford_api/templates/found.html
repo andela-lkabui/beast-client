@@ -7,7 +7,12 @@
   <div class="row">
     <div id="search-result" class="col s10 offset-s1 l8 offset-l2">
       <div id="word-id">{{ word_id }}</div>
-      <div id="phonetic-spelling">/{{ phonetic }}/</div>
+      <div id="phonetic-spelling" class="valign-wrapper">
+        /{{ phonetic }}/
+        {% if audio %}
+          <span> <i class="material-icons grey-text right" onclick="play()">volume_up</i></span>
+        {% endif %}
+      </div>
       <br/>
       <div id="lexical-cat">{{ lex_cat }}</div>
       <br/>
@@ -41,4 +46,13 @@
       <a href="{% url 'search' %}" class="waves-effect waves-light btn right lowercased"><i class="material-icons right">home</i>Take me Home</a>
     </div>
   </div>
+
+  <audio id="audio" src="{{ audio }}"></audio>
+
+  <script type="text/javascript">
+    function play() {
+      var audio = document.getElementById('audio');
+      audio.play();
+    }
+  </script>
 {% endblock %}

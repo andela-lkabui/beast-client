@@ -57,6 +57,10 @@ def search(request):
         for example in examples:
             context['examples'].append(example['text'])
 
+        # some words don't have pronounciation audio, hence the "or" part
+        context['audio'] = lex_entries['pronunciations'][0].get('audioFile')\
+            or ''
+
         full_url = '{0}/synonyms'.format(full_url)
         resp = requests.get(full_url, headers=headers)
 

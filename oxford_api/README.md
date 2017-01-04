@@ -10,3 +10,6 @@
 
 # Known Issues
 * Responses from the API don't necessarily have the same structure. As a result, key errors can be encountered while trying to access non existent keys e.g. while getting the definition for the word `apiculture`.
+
+# Desired Features
+* Hyperlinks per synonym. These hyperlinks should lead to the synonym's definition when clicked.
