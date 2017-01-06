@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^oxford/', include('oxford_api.urls'))
+    url(r'^oxford/', include('oxford_api.urls')),
+    url(r'^telegram/', include('telegram_bot.urls'))
 ]
